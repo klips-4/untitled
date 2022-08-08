@@ -1,0 +1,21 @@
+<div class="AddFormRoom__wrapper full-size flex flex-center">
+    <div class="AddFormRoom__form radius-border flex flex-column flex-justify-between">
+        <div class="AddFormRoom__form-header flex flex-justify-end flex-item-center">
+            <span class="cursor-pointer" @click="closeDialog">x</span>
+        </div>
+        <div class="AddFormRoom__form-content full-size flex flex-center">
+            <input type="text"
+                   class="radius-border"
+                   placeholder="Введите название комнаты"
+                   v-model="roomData.name">
+        </div>
+        <div class="AddFormRoom__form-footer full-size flex flex-center">
+            <button
+                    :class="{'AddForm__form-footer__hoverBtn': roomData.name}"
+                    :disabled="!roomData.name"
+                    @click="addRoom"
+            >Сохранить
+            </button>
+        </div>
+    </div>
+</div>

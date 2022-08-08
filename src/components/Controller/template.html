@@ -1,0 +1,22 @@
+<div class="ChatController__wrapper full-screen hidden-overflow">
+    <div class="ChatController__header">
+        <span
+                class="ChatController__header-addButton shadow flex flex-center cursor-pointer"
+                @click="formVisibleChange">
+            +
+        </span>
+    </div>
+    <RegistryRoom
+            :rooms="rooms"
+            @open="openRoom($event)"/>
+    <AddFormRoom
+            v-if="formVisible"
+            @addRoom="addRoomInRooms($event)"
+            @close="formVisibleChange"/>
+    <ChatRegistry
+            v-if="chatData"
+            :data="chatData"
+            @close="closeChat"
+            @sendMessage="addMessage($event)"
+    />
+</div>

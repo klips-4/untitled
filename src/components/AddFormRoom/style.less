@@ -1,0 +1,60 @@
+.AddFormRoom__ {
+  &wrapper {
+    background: rgba(0, 0, 0, 0.40);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &form {
+
+    background: white;
+
+
+    &-header {
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    &-content {
+      padding: 0 40px;
+
+      input {
+        border: 1px solid grey;
+        padding: 8px;
+        text-align: center;
+
+      }
+    }
+
+    &-footer {
+      margin-top: 30px;
+      border-top: 1px solid grey;
+      padding: 20px;
+
+      &__hoverBtn {
+        &:hover {
+          &:hover {
+            color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            background: black;
+          }
+        }
+      }
+
+      button {
+        padding: 10px;
+        border: 2px solid black;
+        background: white;
+        transition: 0.3s;
+
+        &:disabled {
+          background: grey;
+          font-weight: bold;
+          color: white;
+        }
+      }
+    }
+  }
+}
